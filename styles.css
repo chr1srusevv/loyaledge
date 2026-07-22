@@ -61,7 +61,7 @@ figure { margin: 0; }
 
 h1, h2, h3, h4 {
   margin: 0 0 .5em;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: -.02em;
   color: var(--ink);
   text-wrap: balance;
@@ -103,32 +103,13 @@ a { color: var(--blue-700); text-decoration: none; }
 
 .section { padding: clamp(80px, 9.5vw, 128px) 0; }
 
-.eyebrow {
-  margin: 0 0 18px;
-  font-size: 12px; font-weight: 750; line-height: 1;
-  letter-spacing: .15em; text-transform: uppercase;
-  color: var(--blue-700);
-}
-.eyebrow::before {
-  content: ""; display: inline-block;
-  width: 22px; height: 2px; border-radius: 1px;
-  background: var(--blue);
-  margin-right: 10px; vertical-align: 3px;
-  transform: scaleX(0); transform-origin: 0 50%;
-  transition: transform .9s var(--ease) .12s;
-}
-.is-in .eyebrow::before { transform: scaleX(1); }
-.hero-eyebrow::before { animation: dash-in .8s var(--ease) .5s forwards; }
-@keyframes dash-in { to { transform: scaleX(1); } }
-.section-dark .eyebrow, .band-dark .eyebrow { color: var(--on-navy-dim); }
-
-.section-head { max-width: 760px; margin-bottom: clamp(38px, 5vw, 60px); }
+.section-head { margin-bottom: clamp(38px, 5vw, 60px); }
 .section-head h2, .about-grid h2 {
   font-size: clamp(1.9rem, 3.3vw, 2.7rem);
   line-height: 1.12;
   margin-bottom: .5em;
 }
-.section-sub { font-size: 1.09rem; max-width: 60ch; margin-bottom: 0; }
+.section-sub { font-size: 1.09rem; margin-bottom: 0; }
 
 .section-dark { background: var(--navy); color: var(--on-navy); }
 .section-dark h2, .section-dark h3 { color: #fff; }
@@ -140,7 +121,7 @@ a { color: var(--blue-700); text-decoration: none; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 0 26px; height: 50px;
-  font: 650 15px/1 var(--sans); letter-spacing: .005em;
+  font: 600 15px/1 var(--sans); letter-spacing: .005em;
   border-radius: var(--r-sm); border: 1px solid transparent;
   cursor: pointer; white-space: nowrap;
   transition: background-color .22s var(--ease), border-color .22s var(--ease),
@@ -164,7 +145,7 @@ a { color: var(--blue-700); text-decoration: none; }
 
 .link-quiet {
   display: inline-flex; align-items: center; gap: 9px;
-  font: 650 15px/1 var(--sans); color: var(--ink);
+  font: 600 15px/1 var(--sans); color: var(--ink);
   padding: 6px 2px;
   transition: color .2s var(--ease);
 }
@@ -246,12 +227,10 @@ a { color: var(--blue-700); text-decoration: none; }
   padding: clamp(48px, 7vh, 88px) clamp(36px, 5vw, 84px) clamp(48px, 7vh, 88px) var(--edge);
 }
 
-.hero-eyebrow { margin-bottom: 26px; }
-
 .hero-title {
   margin: 0 0 26px;
   font-size: clamp(2.6rem, 5.6vw, 4.7rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.02;
   letter-spacing: -.028em;
 }
@@ -321,13 +300,15 @@ a { color: var(--blue-700); text-decoration: none; }
 .trust li:nth-child(3) { transition-delay: 180ms; }
 .trust li:nth-child(4) { transition-delay: 270ms; }
 .trust strong {
-  font-size: 2.1rem; font-weight: 800; line-height: 1;
+  font-size: 2.1rem; font-weight: 700; line-height: 1;
   letter-spacing: -.02em;
   color: #fff;
   font-variant-numeric: tabular-nums;
 }
-.trust span {
-  font-size: 11.5px; font-weight: 650; line-height: 1.4;
+/* direct child only — the counter script injects spans INSIDE the strong,
+   and those must inherit the number styling, not the label styling */
+.trust li > span {
+  font-size: 11.5px; font-weight: 600; line-height: 1.4;
   letter-spacing: .13em; text-transform: uppercase;
   color: var(--on-navy-dim);
 }
@@ -354,7 +335,7 @@ a { color: var(--blue-700); text-decoration: none; }
 }
 .prop h3 { font-size: 1.16rem; line-height: 1.3; margin-bottom: .7em; }
 .prop-quote {
-  font-size: 1rem; font-weight: 650;
+  font-size: 1rem; font-weight: 600;
   color: var(--ink-soft);
   margin-bottom: .75em;
 }
@@ -424,32 +405,58 @@ a { color: var(--blue-700); text-decoration: none; }
    Open roles — accordion list
    ========================================================================== */
 
-.roles { border-top: 1px solid var(--hairline); }
-.role { border-bottom: 1px solid var(--hairline); }
+.roles { display: grid; gap: 16px; }
+.role {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.role:hover { border-color: #C6D4EE; box-shadow: var(--shadow-soft); }
+.role.is-open { border-color: var(--blue); box-shadow: var(--shadow-soft); }
 
 .role-head { margin: 0; }
 .role-toggle {
   display: flex; align-items: center; justify-content: space-between; gap: 22px;
-  width: 100%; padding: 28px 8px;
+  width: 100%; padding: 24px 26px;
   background: none; border: 0; cursor: pointer;
   text-align: left; font-family: inherit;
-  border-radius: var(--r-sm);
-  transition: background-color .2s var(--ease);
+  border-radius: var(--r-md);
 }
-.role-toggle:hover { background: var(--panel); }
 
 .role-title {
-  display: flex; flex-direction: column; gap: 7px;
-  font-size: 1.38rem; font-weight: 750; letter-spacing: -.015em;
+  display: flex; flex-direction: column; gap: 12px;
+  font-size: 1.3rem; font-weight: 700; letter-spacing: -.015em;
   line-height: 1.25;
   color: var(--ink);
 }
 .role-title em { font-weight: 700; color: var(--blue-700); }
-.role-meta {
-  font-size: 11px; font-weight: 650; line-height: 1;
-  letter-spacing: .13em; text-transform: uppercase;
-  color: var(--mist);
+
+.role-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 6px 11px;
+  font-size: 11.5px; font-weight: 600; line-height: 1; letter-spacing: .02em;
+  color: var(--ink-soft);
+  background: var(--panel);
+  border-radius: 999px;
 }
+.tag-accent { color: var(--blue-700); background: rgba(71, 128, 255, .12); }
+
+.role-facts {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+.fact {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 15px;
+  background: var(--panel); border-radius: var(--r-sm);
+  font-size: 13.5px; font-weight: 600; color: var(--ink-soft); line-height: 1.35;
+}
+.fact svg { width: 20px; height: 20px; flex: none; color: var(--blue-700); }
+
+.role-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.role-reply { margin: 0; font-size: .9rem; color: var(--mist); }
 
 .role-chev {
   position: relative; flex: none;
@@ -472,19 +479,19 @@ a { color: var(--blue-700); text-decoration: none; }
 
 .role-body { overflow: hidden; }
 .role-body-inner {
-  padding: 4px 8px 42px;
+  padding: 0 26px 32px;
   opacity: 0; transform: translateY(-6px);
   transition: opacity .45s var(--ease) .08s, transform .45s var(--ease) .08s;
 }
 .role.is-open .role-body-inner { opacity: 1; transform: none; }
-.role-overview { max-width: 68ch; padding: 16px 0 4px; font-size: 1.05rem; }
+.role-overview { padding: 6px 0 0; font-size: 1.05rem; }
 
 .role-cols {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px; margin: 16px 0 30px;
 }
 .role-cols h4 {
-  font-size: 12px; font-weight: 750; line-height: 1;
+  font-size: 12px; font-weight: 650; line-height: 1;
   letter-spacing: .13em; text-transform: uppercase;
   color: var(--mist); margin-bottom: 16px;
 }
@@ -500,30 +507,39 @@ a { color: var(--blue-700); text-decoration: none; }
   transform: rotate(-45deg);
 }
 
-.roles-note { margin: 26px 8px 0; font-size: .95rem; color: var(--mist); }
+.roles-note { margin: 26px 2px 0; font-size: .95rem; color: var(--mist); }
 
 /* ==========================================================================
    Benefits — quiet band, three columns
    ========================================================================== */
 
-.benefits {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px 34px;
+.perks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+  gap: 14px;
 }
-.benefits li {
-  display: flex; gap: 14px; align-items: baseline;
-  padding: 10px 0;
-  font-size: .99rem;
-  transition: color .25s var(--ease), transform .25s var(--ease);
+.perk {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  font-size: 14.5px; font-weight: 600; line-height: 1.35;
+  color: var(--ink-soft);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease),
+              border-color .3s var(--ease);
 }
-.benefits li:hover { color: var(--ink); transform: translateX(4px); }
-.bdot {
-  flex: none; width: 7px; height: 7px; border-radius: 2px;
-  background: var(--blue);
-  transform: translateY(-1px);
-  transition: transform .25s var(--ease), background-color .25s var(--ease);
+.perk:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); border-color: #C6D4EE; }
+.perk-icon {
+  flex: none; display: grid; place-items: center;
+  width: 42px; height: 42px; border-radius: 11px;
+  background: rgba(71, 128, 255, .1);
+  color: var(--blue-700);
+  transition: background-color .3s var(--ease), color .3s var(--ease),
+              transform .3s var(--ease);
 }
-.benefits li:hover .bdot { transform: translateY(-1px) scale(1.35) rotate(45deg); background: var(--blue-700); }
+.perk-icon svg { width: 21px; height: 21px; }
+.perk:hover .perk-icon { background: var(--blue-700); color: #fff; transform: scale(1.07) rotate(-4deg); }
 
 /* ==========================================================================
    Growth — vertical timeline
@@ -555,7 +571,7 @@ a { color: var(--blue-700); text-decoration: none; }
   display: grid; place-items: center;
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--navy); color: #fff;
-  font-size: 13px; font-weight: 750;
+  font-size: 13px; font-weight: 650;
   font-variant-numeric: tabular-nums;
   transition: background-color .3s var(--ease), transform .3s var(--ease);
 }
@@ -588,7 +604,7 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
 }
 .stat strong {
   display: block;
-  font-size: 2.15rem; font-weight: 800; line-height: 1.05;
+  font-size: 2.15rem; font-weight: 700; line-height: 1.05;
   letter-spacing: -.02em;
   color: var(--ink);
   font-variant-numeric: tabular-nums;
@@ -625,7 +641,7 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
 .field-wide { grid-column: 1 / -1; }
 
 .field label, .check {
-  font-size: 13.5px; font-weight: 650; line-height: 1.45;
+  font-size: 13.5px; font-weight: 600; line-height: 1.45;
   color: var(--ink-soft);
   transition: color .2s var(--ease);
 }
@@ -671,7 +687,7 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
 .form-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .form-note { margin: 0; font-size: .85rem; color: var(--mist); }
 
-.form-status { grid-column: 1 / -1; margin: 0; font-size: 14.5px; font-weight: 650; }
+.form-status { grid-column: 1 / -1; margin: 0; font-size: 14.5px; font-weight: 600; }
 .form-status.is-ok { color: var(--ok); }
 .form-status.is-bad { color: var(--bad); }
 
@@ -766,7 +782,7 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
   .growth-grid, .apply-grid { grid-template-columns: 1fr; }
   .growth-grid .section-head, .apply-grid .section-head { position: static; margin-bottom: 38px; }
   .about-grid { grid-template-columns: 1fr; }
-  .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .role-facts { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
@@ -790,10 +806,10 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
   .trust { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
   .malta-list { grid-template-columns: 1fr; }
   .role-cols { grid-template-columns: 1fr; gap: 26px; }
-  .role-toggle { padding: 22px 4px; }
-  .role-title { font-size: 1.18rem; }
+  .role-toggle { padding: 20px 18px; }
+  .role-body-inner { padding: 0 18px 26px; }
+  .role-title { font-size: 1.16rem; }
   .form { grid-template-columns: 1fr; gap: 18px; }
-  .benefits { grid-template-columns: 1fr; gap: 6px 0; }
   .about-stats { flex-wrap: wrap; }
 }
 
@@ -825,7 +841,6 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
   .hero-media img { opacity: 1; animation: none; transform: none; }
   .malta-media img { transform: none; }
   .media-reveal img { transform: none; }
-  .eyebrow::before { transform: scaleX(1); }
   .trust li { opacity: 1; transform: none; }
   .role-body-inner { opacity: 1; transform: none; }
 }
