@@ -188,10 +188,30 @@
     activeId = id;
   }
 
-  /* One rAF-throttled scroll pass drives both the rail and the spy. */
+  /* ---------- image parallax ---------- */
+  /* Drives the --par custom property consumed by .hero-media img and
+     .malta-media img. The CSS over-scales those images so the drift never
+     exposes an edge. Skipped entirely under reduced motion. */
+  var parallaxImgs = reduceMotion
+    ? []
+    : Array.prototype.slice.call(document.querySelectorAll('.hero-media img, .malta-media img'));
+
+  function parallax() {
+    var vh = window.innerHeight;
+    parallaxImgs.forEach(function (img) {
+      var r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      var offset = r.top + r.height / 2 - vh / 2;
+      var y = Math.max(-26, Math.min(26, -offset * 0.055));
+      img.style.setProperty('--par', y.toFixed(1) + 'px');
+    });
+  }
+
+  /* One rAF-throttled scroll pass drives the rail, the spy and the parallax. */
   var ticking = false;
   function frame() {
     ticking = false;
+    parallax();
     var doc = document.documentElement;
     var max = doc.scrollHeight - doc.clientHeight;
     var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
