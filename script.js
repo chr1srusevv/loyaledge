@@ -391,7 +391,7 @@
         status.className = 'form-status is-ok';
       })
       .catch(function () {
-        status.textContent = 'Something went wrong sending your application. Please email careers@example.com instead.';
+        status.textContent = 'Something went wrong sending your application. Please email hr@loyaledge.net instead.';
         status.className = 'form-status is-bad';
       });
   });

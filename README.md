@@ -1,9 +1,12 @@
 # Loyaledge — Careers Landing Page
 
-A single-page, conversion-focused recruitment site for **Loyaledge**, the Account
-Manager careers program for **Peak Services Ltd** in Malta. It recruits multilingual
-relationship-management professionals across Europe to relocate for higher earnings,
-paid training and fast progression.
+A single-page, conversion-focused recruitment site for **Loyaledge**, the Customer
+Support careers program for **Peak Services Ltd** in Malta. It recruits multilingual
+customer-support professionals across Europe to relocate for paid training, relocation
+support and career progression.
+
+> Copy on this page is legally reviewed. Before changing any wording, read the **Legal
+> review** block at the top of [`BRIEF.md`](BRIEF.md) — it overrides the rest of the brief.
 
 ## Stack
 
@@ -32,11 +35,14 @@ python -m http.server 8000
 
 - **Wire the application form.** `#applyForm` carries `data-endpoint="REPLACE_WITH_ATS_ENDPOINT"`.
   Set it to your ATS or webhook URL; until then the form validates but sends nothing.
-- **Set the contact email.** The footer uses `careers@example.com` as a placeholder.
+- ~~**Set the contact email.**~~ Done — `hr@loyaledge.net` in the footer and in
+  `script.js`'s submit-failure message.
 - **Drop in photography.** The page ships with brand-colour blocks and no stock photos.
   Real-image slots are marked with `<!-- PHOTO SLOT -->` comments.
-- **Add more roles** by duplicating the `.role` block (with a new `data-role-id`) and
-  adding a matching `<option>` to the form's role select.
+- **Adding roles.** The page carries one multilingual `.role` block by design — per legal,
+  language-specific variants must not appear here. Language requirements belong on the
+  individual open positions. If a genuinely different role is added, duplicate the `.role`
+  block with a new `data-role-id` and add a matching `<option>` to the form's role select.
 
 ## Accessibility & motion
 

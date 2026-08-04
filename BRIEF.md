@@ -1,5 +1,25 @@
 # Loyaledge — Retention Careers Landing Page
 
+> ## ⚠️ Legal review (2026-08-04) — supersedes this brief
+>
+> Legal has reviewed the live copy. Where this brief conflicts with the rules below,
+> **the rules below win.** The brief is kept for historical context only.
+>
+> - **Role title is "Customer Support Representative".** No Account Managers, no Portfolio
+>   Managers, no Client Success Managers/Directors, no Relationship Managers as a job
+>   title. The work is customer support — technical and ongoing support.
+> - **No "portfolio" framing.** Use "an established book of clients" / "the clients you
+>   support".
+> - **No "uncapped" rewards.** Fixed base salary plus performance bonuses.
+> - **Growth must read as potential opportunity, not de facto fact** — the page is public.
+>   No "fast-growing company", no "we're expanding across Europe".
+> - **No specific languages anywhere on the page.** Use "multilingual". Specific language
+>   requirements belong on the individual open positions, which are maintained elsewhere.
+> - **Employer description:** "international outsourcing company specialising in Customer
+>   Support and client relations" — not "financial services".
+> - Approved progression path: Customer Support Representative → Senior Manager → Team
+>   Leader → Customer Relationship Manager.
+
 ## Goal
 
 Ship a single-page, conversion-focused careers site that recruits **multilingual Account Managers (client portfolio / client loyalty roles)** to relocate to Malta and join Peak Services Ltd.
