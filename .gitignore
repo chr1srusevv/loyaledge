@@ -5,3 +5,6 @@ Thumbs.db
 
 # Local Claude Code tooling (dev-server config, not part of the site)
 .claude/
+
+# Wrangler local cache
+.wrangler/
