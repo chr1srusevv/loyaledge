@@ -1,4 +1,4 @@
-# Loyaledge — Retention Careers Landing Page
+# LoyalEdge — Retention Careers Landing Page
 
 > ## ⚠️ Legal review (2026-08-04) — supersedes this brief
 >
@@ -46,11 +46,11 @@ This page is **only** about the client-portfolio / account-management track. The
 
 ### Company naming (decision made — flag if wrong)
 The source text mixes three names. Resolution used here:
-- **Loyaledge** = the recruitment brand / name of this page and program.
+- **LoyalEdge** = the recruitment brand / name of this page and program.
 - **Peak Services Ltd** = the legal employer, named in the "About" and in the job description.
 - **"Smart Connect"** = dropped entirely; it belongs to the sales-side draft.
 
-If Loyaledge is actually meant to be a standalone entity rather than a Peak Services program, this needs correcting before build.
+If LoyalEdge is actually meant to be a standalone entity rather than a Peak Services program, this needs correcting before build.
 
 ---
 
@@ -84,11 +84,11 @@ Light theme throughout. Gradients between `#4780FF` and `#1B3476` are on-brand f
 
 ### 1. Hero
 - **Headline:** *Build Client Relationships That Last. In the Mediterranean Sun.*
-- **Sub-headline:** Join Loyaledge in Malta as an Account Manager. Grow a portfolio of loyal clients, earn uncapped rewards tied to the value you build, and live somewhere that feels like a permanent getaway.
+- **Sub-headline:** Join LoyalEdge in Malta as an Account Manager. Grow a portfolio of loyal clients, earn uncapped rewards tied to the value you build, and live somewhere that feels like a permanent getaway.
 - **CTAs:** `[ View Open Roles ]` (primary, `#4780FF`) · `[ Discover Life in Malta ]` (secondary, outline)
 - Trust strip beneath: *200+ professionals · Multiple nationalities · Full relocation support · Paid training*
 
-### 2. Why Loyaledge — core value props (4 cards)
+### 2. Why LoyalEdge — core value props (4 cards)
 
 **💎 Portfolio Excellence & Client Loyalty** — *"Build long-term value, not one-off transactions."*
 Manage, nurture and grow high-value relationships with existing clients. Drive strong retention benchmarks through meaningful conversations and genuine service alignment.
@@ -158,7 +158,7 @@ Logo, Peak Services legal line, contact email, social links, privacy policy, equ
 
 ## Resolved decisions
 
-1. **Loyaledge vs Peak Services** — Loyaledge is the recruitment brand; Peak Services Ltd is the named legal employer. "Smart Connect" dropped. *Revisit if Loyaledge is a separate entity.*
+1. **LoyalEdge vs Peak Services** — LoyalEdge is the recruitment brand; Peak Services Ltd is the named legal employer. "Smart Connect" dropped. *Revisit if LoyalEdge is a separate entity.*
 2. **Application handling** — form posts to a `data-endpoint` placeholder on the `<form>`. Not wired to any live service. Swap the attribute value for the real ATS/webhook URL.
 3. **Additional languages** — Swedish ships now. Roles are marked up as a repeatable `.role` block with `data-role-id`; adding Polish/Italian is a copy-paste of one block plus one `<option>` in the form.
 4. **Photography** — ships with **no stock imagery**. Visual weight comes from typography, brand color blocks and abstract SVG. Photo slots are marked with `<!-- PHOTO SLOT -->` comments so real assets drop in without a redesign.
@@ -167,13 +167,13 @@ Logo, Peak Services legal line, contact email, social links, privacy policy, equ
 
 ## Ready-to-run build prompt
 
-> Build a single-page recruitment website for **Loyaledge**, the Account Manager careers page for Peak Services Ltd in Malta, following `BRIEF.md` in this directory exactly.
+> Build a single-page recruitment website for **LoyalEdge**, the Account Manager careers page for Peak Services Ltd in Malta, following `BRIEF.md` in this directory exactly.
 >
 > Produce `index.html`, `styles.css` and `script.js` — static, no build step, no external dependencies. Inline `assets/loyaledge-logo.svg` as SVG.
 >
 > Brand: primary `#4780FF`, deep navy `#1B3476`, light off-white background `#F7F9FC` (light theme, never dark, never pure white). Tone: energetic, aspirational, supportive, transparent, high-performance.
 >
-> Sections in order: hero → why Loyaledge (4 value cards) → the Malta advantage (4 tiles) → open positions (expandable, launching with Account Manager – Swedish Speaker) → benefits grid → career development path → about Peak Services → application form → footer.
+> Sections in order: hero → why LoyalEdge (4 value cards) → the Malta advantage (4 tiles) → open positions (expandable, launching with Account Manager – Swedish Speaker) → benefits grid → career development path → about Peak Services → application form → footer.
 >
 > **Critical constraint:** never use the phrase "retention agent". "Retention" as a business activity — client retention, retention targets, retention bonus — is expected and correct. Role titles must be Account Manager / Client Relationship Manager / Portfolio Manager. Exclude all Sales Agent content.
 >

@@ -1,6 +1,6 @@
-# Loyaledge — Careers Landing Page
+# LoyalEdge — Careers Landing Page
 
-A single-page, conversion-focused recruitment site for **Loyaledge**, the Customer
+A single-page, conversion-focused recruitment site for **LoyalEdge**, the Customer
 Support careers program for **Peak Services Ltd** in Malta. It recruits multilingual
 customer-support professionals across Europe to relocate for paid training, relocation
 support and career progression.

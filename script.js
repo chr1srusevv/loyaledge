@@ -1,4 +1,4 @@
-/* Loyaledge careers page — progressive enhancement only.
+/* LoyalEdge careers page — progressive enhancement only.
    Everything here degrades gracefully: with JS off the roles stay collapsed
    but the form still submits natively and all content remains in the DOM. */
 (function () {
