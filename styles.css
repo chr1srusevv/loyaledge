@@ -541,6 +541,13 @@ a { color: var(--blue-700); text-decoration: none; }
 .perk-icon svg { width: 21px; height: 21px; }
 .perk:hover .perk-icon { background: var(--blue-700); color: #fff; transform: scale(1.07) rotate(-4deg); }
 
+.perks-note {
+  max-width: 68ch;
+  margin: 26px 0 0;
+  font-size: .86rem; line-height: 1.6;
+  color: var(--mist);
+}
+
 /* ==========================================================================
    Growth — vertical timeline
    ========================================================================== */
@@ -723,6 +730,14 @@ p.about-copy:not(.section-sub) { font-size: 1rem; max-width: 60ch; }
 .footer-legal p { font-size: .9rem; color: var(--on-navy-dim); margin-bottom: .9em; }
 .footer-legal strong { color: var(--on-navy); }
 .footer-contact a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+.footer-disclaimer { padding-bottom: 30px; }
+.footer-disclaimer p {
+  max-width: 92ch; margin: 0;
+  font-size: .82rem; line-height: 1.65;
+  color: var(--on-navy-dim);
+}
+.footer-disclaimer strong { color: var(--on-navy); }
 
 .footer-bottom {
   display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;

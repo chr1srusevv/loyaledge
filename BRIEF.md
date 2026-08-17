@@ -19,6 +19,22 @@
 >   Support and client relations" — not "financial services".
 > - Approved progression path: Customer Support Representative → Senior Manager → Team
 >   Leader → Customer Relationship Manager.
+>
+> ### Legal review v2 (2026-08-17) — additions
+>
+> - **Do not tie pay growth to client metrics.** Compensation growth reflects *quality of
+>   service, professionalism and contribution to positive client experiences* — not the
+>   "strength, retention rate and longevity" of relationships. Bonuses are
+>   "performance-based".
+> - **The benefits list carries a qualifier.** Below "What comes with the job":
+>   "Benefits and incentives may vary by role and are subject to the Company's offer,
+>   eligibility criteria and applicable employment terms."
+> - **Every page carries the site-wide footer disclaimer** (`.footer-disclaimer`, above the
+>   copyright rule on `index.html`, `privacy.html` and `terms.html`): information is for
+>   general informational and recruitment purposes only; opportunities, remuneration,
+>   benefits and incentives are subject to eligibility, company policies and any individual
+>   employment offer; nothing on the site guarantees employment, remuneration, benefits or
+>   career progression.
 
 ## Goal
 
