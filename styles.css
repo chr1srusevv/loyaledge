@@ -542,7 +542,6 @@ a { color: var(--blue-700); text-decoration: none; }
 .perk:hover .perk-icon { background: var(--blue-700); color: #fff; transform: scale(1.07) rotate(-4deg); }
 
 .perks-note {
-  max-width: 68ch;
   margin: 26px 0 0;
   font-size: .86rem; line-height: 1.6;
   color: var(--mist);
